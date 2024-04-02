@@ -1,3 +1,4 @@
+import 'package:booking_app/homePage.dart';
 import 'package:booking_app/welcom_view.dart';
 import 'package:flutter/material.dart';
 
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: WelcomPage(),
+      home: HomePag(),
     );
   }
 }
