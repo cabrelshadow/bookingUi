@@ -14,7 +14,7 @@ class _HomePagState extends State<HomePag> {
     var media=MediaQuery.sizeOf(context);
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
-        
+
         items: [
 
           BottomNavigationBarItem(icon: Icon(Icons.home_filled,color: Colors.blue,),label: 'Home' ),
@@ -111,30 +111,283 @@ class _HomePagState extends State<HomePag> {
                  ),
                ),
                SizedBox(height: 40,),
-               Container(
-                 height: 570,
-                 width:media.width,
-                 decoration: BoxDecoration(
-                   color: Colors.white,
-                   borderRadius: BorderRadius.only(
-                     topLeft: Radius.circular(20),
-                     topRight: Radius.circular(20),
-                   )
-                 ),
+               SingleChildScrollView(
+                 child: Container(
+                   height: 570,
+                   width:media.width,
+                   decoration: BoxDecoration(
+                     color: Colors.white,
+                     borderRadius: BorderRadius.only(
+                       topLeft: Radius.circular(20),
+                       topRight: Radius.circular(20),
+                     )
+                   ),
 
 
 
-                       child: Column(
-                         children: [
-                           SizedBox(
-                             child: Padding(
-                               padding: const EdgeInsets.all(8.0),
+                         child: Column(
+                           children: [
+                             SizedBox(
+                               child: Padding(
+                                 padding: const EdgeInsets.only(top: 20,left: 20,right: 20),
+                                 child: Row(
+
+                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+                                   children: [
+                                     Text("Hotel Near You",
+                                       style: TextStyle(
+                                         fontSize: 20,
+                                         fontWeight: FontWeight.bold,
+                                       ),
+
+                                     ),
+
+                                     Text("View All",
+                                         style: TextStyle(
+                                             fontSize: 15,
+                                             fontWeight: FontWeight.bold,
+                                             color: Colors.blue
+                                         )
+                                     ),
+
+                                   ],
+                                 ),
+                               ),
+                             ),
+                             SizedBox(
+                               height: 270,
+                               child: ListView(
+
+                                 scrollDirection: Axis.horizontal,
+                                 children: [
+                                   Padding(
+                                     padding: const EdgeInsets.only(left: 18,top: 20,right: 3),
+                                     child: Container(
+                                       height: 270,
+                                       width: 170,
+                                       decoration: BoxDecoration(
+                                         borderRadius: BorderRadius.circular(15),
+                                         image: DecorationImage(
+                                           image: AssetImage("assets/h3.jpg"),
+                                           fit: BoxFit.cover,
+                                         ),
+                                       ),
+
+                                         child: Stack(
+                                           children: [
+                                             Positioned(
+                                               top: 170,
+                                               left: 10,
+                                               child: Column(
+                                                 crossAxisAlignment: CrossAxisAlignment.start,
+                                                 children: [
+                                                   Text("Paradise Resort",
+                                                    style: TextStyle(fontWeight: FontWeight.bold,
+                                                      color: Colors.white,
+                                                      fontSize: 16
+                                                    ),
+                                                   ),
+                                                   Text("mumbai",
+                                                     style: TextStyle(
+                                                         color: Colors.white,
+                                                         fontSize: 14
+                                                     ),
+                                                   ),
+                                                   Row(
+                                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                     children: [
+                                                       RichText(
+                                                         text: TextSpan(
+                                                             text: "450FCFA/",
+                                                             style: TextStyle(
+                                                               fontSize:13,
+                                                               color: Colors.white,
+                                                               fontWeight: FontWeight.bold
+                                                             ),
+
+                                                             children: [
+                                                               TextSpan(
+                                                                 text: " night",
+                                                                 style: TextStyle(
+                                                                     fontSize:13,
+                                                                     color: Colors.white,
+
+                                                                 ),
+                                                               )
+                                                             ]
+                                                         ),
+
+                                                       ),
+                                                       SizedBox(width:19 ,),
+                                                       Icon(Icons.star,color: Colors.yellow,size: 20,),
+                                                       Text("4.8" ,style:TextStyle(fontWeight: FontWeight.bold,color: Colors.white),)
+                                                     ],
+                                                   )
+                                                 ],
+                                               ),
+                                             ),
+                                           ],
+                                         ),
+
+                                     ),
+                                   ),
+                                   Padding(
+                                     padding: const EdgeInsets.only(left: 18,top: 20,right: 3),
+                                     child: Container(
+                                       height: 270,
+                                       width: 170,
+                                       decoration: BoxDecoration(
+                                         borderRadius: BorderRadius.circular(15),
+                                         image: DecorationImage(
+                                           image: AssetImage("assets/h2.jpg"),
+                                           fit: BoxFit.cover,
+                                         ),
+                                       ),
+
+                                         child: Stack(
+                                           children: [
+                                             Positioned(
+                                               top: 170,
+                                               left: 10,
+                                               child: Column(
+                                                 crossAxisAlignment: CrossAxisAlignment.start,
+                                                 children: [
+                                                   Text("Paradise Resort",
+                                                    style: TextStyle(fontWeight: FontWeight.bold,
+                                                      color: Colors.white,
+                                                      fontSize: 16
+                                                    ),
+                                                   ),
+                                                   Text("mumbai",
+                                                     style: TextStyle(
+                                                         color: Colors.white,
+                                                         fontSize: 14
+                                                     ),
+                                                   ),
+                                                   Row(
+                                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                     children: [
+                                                       RichText(
+                                                         text: TextSpan(
+                                                             text: "450FCFA/",
+                                                             style: TextStyle(
+                                                               fontSize:13,
+                                                               color: Colors.white,
+                                                               fontWeight: FontWeight.bold
+                                                             ),
+
+                                                             children: [
+                                                               TextSpan(
+                                                                 text: " night",
+                                                                 style: TextStyle(
+                                                                     fontSize:13,
+                                                                     color: Colors.white,
+
+                                                                 ),
+                                                               )
+                                                             ]
+                                                         ),
+
+                                                       ),
+                                                       SizedBox(width:19 ,),
+                                                       Icon(Icons.star,color: Colors.yellow,size: 20,),
+                                                       Text("4.8" ,style:TextStyle(fontWeight: FontWeight.bold,color: Colors.white),)
+                                                     ],
+                                                   )
+                                                 ],
+                                               ),
+                                             ),
+                                           ],
+                                         ),
+
+                                     ),
+                                   ),  Padding(
+                                     padding: const EdgeInsets.only(left: 18,top: 20,right: 3),
+                                     child: Container(
+                                       height: 270,
+                                       width: 170,
+                                       decoration: BoxDecoration(
+                                         borderRadius: BorderRadius.circular(15),
+                                         image: DecorationImage(
+                                           image: AssetImage("assets/h2.jpg"),
+                                           fit: BoxFit.cover,
+                                         ),
+                                       ),
+
+                                         child: Stack(
+                                           children: [
+                                             Positioned(
+                                               top: 170,
+                                               left: 10,
+                                               child: Column(
+                                                 crossAxisAlignment: CrossAxisAlignment.start,
+                                                 children: [
+                                                   Text("Paradise Resort",
+                                                    style: TextStyle(fontWeight: FontWeight.bold,
+                                                      color: Colors.white,
+                                                      fontSize: 16
+                                                    ),
+                                                   ),
+                                                   Text("mumbai",
+                                                     style: TextStyle(
+                                                         color: Colors.white,
+                                                         fontSize: 14
+                                                     ),
+                                                   ),
+                                                   Row(
+                                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                     children: [
+                                                       RichText(
+                                                         text: TextSpan(
+                                                             text: "450FCFA/",
+                                                             style: TextStyle(
+                                                               fontSize:13,
+                                                               color: Colors.white,
+                                                               fontWeight: FontWeight.bold
+                                                             ),
+
+                                                             children: [
+                                                               TextSpan(
+                                                                 text: " night",
+                                                                 style: TextStyle(
+                                                                     fontSize:13,
+                                                                     color: Colors.white,
+
+                                                                 ),
+                                                               )
+                                                             ]
+                                                         ),
+
+                                                       ),
+                                                       SizedBox(width:19 ,),
+                                                       Icon(Icons.star,color: Colors.yellow,size: 20,),
+                                                       Text("4.8" ,style:TextStyle(fontWeight: FontWeight.bold,color: Colors.white),)
+                                                     ],
+                                                   )
+                                                 ],
+                                               ),
+                                             ),
+                                           ],
+                                         ),
+
+                                     ),
+                                   ),
+
+
+
+                                 ],
+                               ),
+                             ),
+
+                           Padding(
+                               padding: const EdgeInsets.only(top: 20,left: 20,right: 20),
                                child: Row(
 
                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
-                                 children:const [
-                                   Text("Hotel Near You",
+                                 children: [
+                                   Text("Explore",
                                      style: TextStyle(
                                        fontSize: 20,
                                        fontWeight: FontWeight.bold,
@@ -153,29 +406,145 @@ class _HomePagState extends State<HomePag> {
                                  ],
                                ),
                              ),
-                           ),
 
-                         ],
+                             SizedBox(
+                               height: 150,
+                               child: ListView(
+
+                                 scrollDirection: Axis.horizontal,
+                                 children: [
+                                   Padding(
+                                     padding: const EdgeInsets.only(left: 18,top: 20,right: 3),
+                                     child: Container(
+                                       height: 270,
+                                       width: 170,
+                                       decoration: BoxDecoration(
+                                         borderRadius: BorderRadius.circular(15),
+                                         image: DecorationImage(
+                                           image: AssetImage("assets/h3.jpg"),
+                                           fit: BoxFit.cover,
+                                         ),
+                                       ),
+
+                               child: Stack(
+                                     children: [
+                                     Positioned(
+                                     top: 80,
+                                       left: 20,
+                                       right: 20,
+
+                                       child: Column(
+                                         crossAxisAlignment: CrossAxisAlignment.start,
+                                         children: [
+                                           Center(
+                                             child: Text("Bali",
+                                               style: TextStyle(fontWeight: FontWeight.bold,
+                                                   color: Colors.white,
+                                                   fontSize: 16
+                                               ),
+                                             ),
+                                           ),
+
+
+                                         ],
+                                       ),
+                                     ),
+                               ],
+                             ),
+
+                                     ),
+                                   ),
+                                   Padding(
+                                     padding: const EdgeInsets.only(left: 18,top: 20,right: 3),
+                                     child: Container(
+                                       height: 270,
+                                       width: 170,
+                                       decoration: BoxDecoration(
+                                         borderRadius: BorderRadius.circular(15),
+                                         image: DecorationImage(
+                                           image: AssetImage("assets/h2.jpg"),
+                                           fit: BoxFit.cover,
+                                         ),
+                                       ),
+
+                               child: Stack(
+                                     children: [
+                                     Positioned(
+                                     top: 80,
+                                       left: 20,
+                                       right: 20,
+
+                                       child: Column(
+                                         crossAxisAlignment: CrossAxisAlignment.start,
+                                         children: [
+                                           Center(
+                                             child: Text("Naerobie",
+                                               style: TextStyle(fontWeight: FontWeight.bold,
+                                                   color: Colors.white,
+                                                   fontSize: 16
+                                               ),
+                                             ),
+                                           ),
+
+
+                                         ],
+                                       ),
+                                     ),
+                               ],
+                             ),
+                                     ),
+                                   ),     Padding(
+                                     padding: const EdgeInsets.only(left: 18,top: 20,right: 3),
+                                     child: Container(
+                                       height: 270,
+                                       width: 170,
+                                       decoration: BoxDecoration(
+                                         borderRadius: BorderRadius.circular(15),
+                                         image: DecorationImage(
+                                           image: AssetImage("assets/h1.jpg"),
+                                           fit: BoxFit.cover,
+                                         ),
+                                       ),
+
+                               child: Stack(
+                                     children: [
+                                     Positioned(
+                                     top: 80,
+                                       left: 20,
+                                       right: 20,
+
+                                       child: Column(
+                                         crossAxisAlignment: CrossAxisAlignment.start,
+                                         children: [
+                                           Text("Banjoul",
+                                             style: TextStyle(fontWeight: FontWeight.bold,
+                                                 color: Colors.white,
+                                                 fontSize: 16
+                                             ),
+                                           ),
+
+
+                                         ],
+                                       ),
+                                     ),
+                               ],
+                             ),
+
+                                     ),
+                                   ),
+
+
+
+
+                                 ],
+                               ),
+                             ),
+
+
+                           ],
+                         ),
                        ),
-                     ),
-               //voila dou mon code crash stp
-               Container(
-                 child: ListView(
-                   children: [
-                     Container(
-                       height: 100,
-                       width: 300,
-                       decoration: BoxDecoration(
-                           borderRadius: BorderRadius.circular(15),
-                           image: DecorationImage(
-                               image: AssetImage("assets/h1.jpg"),
-                               fit: BoxFit.cover
-                           )
-                       ),
-                     )
-                   ],
-                 ),
-               )
+               ),
 
 
              ],
